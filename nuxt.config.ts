@@ -5,13 +5,5 @@ export default defineNuxtConfig({
     ],
    modules: [
       'nuxt-windicss',
-    ],
-    vite: {
-      css: {
-          preprocessorOptions: {
-              scss: {
-              },
-          },
-      },
-  }
+    ]
 })
