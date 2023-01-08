@@ -1,9 +1,9 @@
 <template>
-   <section class="relative -top-10vh">
+   <section class="relative -top-15vh">
       <div class="container flex flex-col lg:flex-row">
          <div class="lg:(w-1/2 m-0) mb-80px">
             <UiSubtitle>Опыт_Написания</UiSubtitle>
-            <h2 class="h2T my-30px">Событие <br> Года</h2>
+            <h2 class="h2T mb-30px">Событие <br> Года</h2>
             <div class="flex text-sm sm:(flex-row space-x-30px space-y-0) space-y-20px flex-col">
                <div>
                   Технологии меняют то, как люди путешествуют, работают, взаимодействуют и организуют свою повседневную

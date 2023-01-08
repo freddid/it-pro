@@ -13,13 +13,7 @@
 }
 
 .glitch {
-   color: #ffffff;
-   position: relative;
-   font-size: 8vw;
-   font-family: 'Press Start 2P', cursive;
-
-   font-weight: 800;
-   // margin: 70px 200px;
+   @apply text-base-1 text-40px sm: text-[8vw] relative font-pres font-bold;
    animation: glitch 5s 5s infinite;
 }
 

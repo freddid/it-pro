@@ -1,9 +1,7 @@
 <template>
-  <div class="text-base-1 bg-base-2 bg-0 bg-fixed">
+  <div class="bg-base-2 bg-0 text-base-1 bg-fixed">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
-<script setup>
-</script>
