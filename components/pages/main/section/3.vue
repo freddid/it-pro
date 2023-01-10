@@ -5,7 +5,7 @@
             <UiSubtitle>Дата_Мероприятия</UiSubtitle>
             <h2 class="h2T">Подсчет</h2>
          </div>
-         <div class="flex justify-between lg:(ml-50px flex-auto w-auto) w-full">
+         <div class="grid grid-cols-5 lg:(ml-50px flex-auto w-auto) w-full">
             <div v-for="t in date" :key="t[1]" class="text-center">
                <div class="sm:text-7xl text-30px">{{ t[0] }}</div>
                <div class="text-base-3 sm:text-lg text-sm">{{ t[1] }}</div>
