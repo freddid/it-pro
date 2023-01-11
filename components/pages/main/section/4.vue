@@ -5,12 +5,15 @@
             <UiSubtitle>Свяжитесь_С_Нами</UiSubtitle>
             <h2 class="h2T">Запись на <br> мероприятие</h2>
          </div>
-         <form class="flex flex-col lg:max-w-400px space-y-30px w-full" action="">
-            <input class="inputF" placeholder="Имя" type="text" name="firstName">
-            <input class="inputF" placeholder="Фамилия" type="text" name="lastName">
-            <input class="inputF" placeholder="Электронная почта" type="text" name="email">
-            <textarea class="inputF" placeholder="Сообщение" name="comment" id="" cols="5" rows="3"></textarea>
-            <div><button class="bg-base-3 p-20px text-base-2 rounded-[40px]">Отправить</button></div>
+         <form class="flex flex-col lg:max-w-400px space-y-30px w-full" @submit.prevent="submit">
+            <input required v-model="name" class="inputF" placeholder="Имя" type="text" name="firstName">
+            <input required v-model="lastName" class="inputF" placeholder="Фамилия" type="text" name="lastName">
+            <input required v-model="email" class="inputF" placeholder="Электронная почта" type="text" name="email">
+            <div>
+               <button :class="[rightReg ? 'bg-base-1' : 'bg-base-3']" :disabled="rightReg"
+                  class="p-20px text-base-2 rounded-[40px] hover:bg-base-1 transition-all">
+                  {{ rightReg?'Теперь вы участник!': 'Отправить' }}</button>
+            </div>
          </form>
          <div class="flex flex-col space-y-30px">
             <div v-for="contact in contacts" :key="contact[0]">
@@ -22,11 +25,32 @@
    </section>
 </template>
 <script setup>
+const name = ref('')
+const lastName = ref('')
+const email = ref('')
+const rightReg = ref(false)
 const contacts = ref([
    ['Телефон', "+7(871)222-36-07"],
    ['Почта', "info@gstou.ru"],
    ['Адрес', "пр. Х. Исаева, 100, Грозный"]
 ])
+
+const submit = async () => {
+   if (!(name.value && lastName.value && email.value)) return
+
+   const response = await fetch('http://185.211.170.2:5500/api/addUser', {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify({ name: name.value, lastName: lastName.value, email: email.value })
+   });
+
+   if (response.status == 200) rightReg.value = true
+}
 
 </script>
 <style>

@@ -14,5 +14,8 @@
     "nuxt-windicss": "^2.6.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "@vuepic/vue-datepicker": "^3.6.4"
   }
 }
