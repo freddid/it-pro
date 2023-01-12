@@ -31,7 +31,7 @@ const showM = ref(false)
 }
 
 .header {
-   @apply py-20px absolute w-full sm: (bg-transparent text-base-1) bg-base-1 text-base-2 transition-all max-h-72px;
+   @apply py-15px fixed z-10 w-full sm: (absolute py-20px bg-transparent text-base-1) bg-base-1 text-base-2 transition-all max-h-72px;
 
    &.show-m {
       @apply max-h-300px;

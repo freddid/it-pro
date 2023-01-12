@@ -5,11 +5,8 @@
    </div>
 </template>
 <script setup>
-const usersData = await(await fetch('http://185.211.170.2:5500/api/getUsers')).json()
 definePageMeta({
    layout: "admin",
 });
+const usersData = await(await fetch('http://185.211.170.2:5500/api/getUsers')).json()
 </script>
-<style lang="">
-   
-</style>

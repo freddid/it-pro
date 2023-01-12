@@ -1,5 +1,5 @@
 <template>
-   <section class="sm:mt-200px mt-100px">
+   <section class=" sm:mb-250px mb-120px">
       <div class="container flex flex-col lg:(items-center flex-row) ">
          <div class="mb-40px lg:mb-0">
             <UiSubtitle>Дата_Мероприятия</UiSubtitle>

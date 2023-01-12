@@ -1,58 +1,21 @@
 <template>
    <section>
-      <div class="container flex sm:mt-200px mt-120px justify-between flex-col lg:(flex-row) lg:space-y-0 space-y-60px">
-         <div class="">
-            <UiSubtitle>Свяжитесь_С_Нами</UiSubtitle>
-            <h2 class="h2T">Запись на <br> мероприятие</h2>
+      <div class="container sm:mb-250px mb-120px flex lg:flex-row flex-col">
+         <div class="lg:mr-40px mb-30px">
+            <UiSubtitle>Последняя_Новость</UiSubtitle>
+            <h2 class="h2T mb-20px lg:mb-50px">Начало <br> деятельности</h2>
+            <div class="text-lg">
+               Компания АйТи Про (IT Pro) реализует проекты по управленческой аналитике и организации работы с
+               корпоративными данными для отраслей промышленного производства, логистики, ритейла, добычи полезных
+               ископаемых и кредитно-финансовых организаций. Компания разработала и внедряет продукт под торговой маркой
+               BI.Qube
+            </div>
          </div>
-         <form class="flex flex-col lg:max-w-400px space-y-30px w-full" @submit.prevent="submit">
-            <input required v-model="name" class="inputF" placeholder="Имя" type="text" name="firstName">
-            <input required v-model="lastName" class="inputF" placeholder="Фамилия" type="text" name="lastName">
-            <input required v-model="email" class="inputF" placeholder="Электронная почта" type="text" name="email">
-            <div>
-               <button :class="[rightReg ? 'bg-base-1' : 'bg-base-3']" :disabled="rightReg"
-                  class="p-20px text-base-2 rounded-[40px] hover:bg-base-1 transition-all">
-                  {{ rightReg?'Теперь вы участник!': 'Отправить' }}</button>
-            </div>
-         </form>
-         <div class="flex flex-col space-y-30px">
-            <div v-for="contact in contacts" :key="contact[0]">
-               <div class="font-bold font-mons">{{ contact[0] }}</div>
-               <div class="font-mons">{{ contact[1] }}</div>
-            </div>
+         <div class="">
+            <img src="@/assets/imgs/last-new.jpeg" alt="">
          </div>
       </div>
    </section>
 </template>
 <script setup>
-const name = ref('')
-const lastName = ref('')
-const email = ref('')
-const rightReg = ref(false)
-const contacts = ref([
-   ['Телефон', "+7(871)222-36-07"],
-   ['Почта', "info@gstou.ru"],
-   ['Адрес', "пр. Х. Исаева, 100, Грозный"]
-])
-
-const submit = async () => {
-   if (!(name.value && lastName.value && email.value)) return
-
-   const response = await fetch('http://185.211.170.2:5500/api/addUser', {
-      method: 'POST',
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      headers: { 'Content-Type': 'application/json' },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer',
-      body: JSON.stringify({ name: name.value, lastName: lastName.value, email: email.value })
-   });
-
-   if (response.status == 200) rightReg.value = true
-}
-
 </script>
-<style>
-
-</style>

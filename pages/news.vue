@@ -1,3 +1,4 @@
 <template>
-   <h1 class="h2T min-h-screen flex justify-center items-center">Новости</h1>
+   <PagesNewsSection1 />
+   <PagesNewsSection2 />
 </template>

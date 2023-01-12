@@ -3,6 +3,7 @@
    <PagesMainSection2 />
    <PagesMainSection3 />
    <PagesMainSection4 />
+   <PagesMainSection5 />
 </template>
 <script setup>
 </script>
