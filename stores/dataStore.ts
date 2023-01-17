@@ -45,7 +45,6 @@ export const useDataStore = defineStore('DataStore', {
          }
       },
       async getDate() {
-         if (this.date) return
          try {
             this.date = (await (await fetch(`${baseUrl}/getTime`)).json()).endDate
          } catch (error) {
@@ -105,4 +104,4 @@ if (import.meta.hot) {
    import.meta.hot.accept(acceptHMRUpdate(useDataStore, import.meta.hot));
 }
 
-const baseUrl = 'http://185.211.170.2:5100/api'
+const baseUrl = 'https://it-pro-back.onrender.com/api'
