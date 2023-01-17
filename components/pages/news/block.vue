@@ -10,7 +10,7 @@
             </div>
          </div>
          <div class="lg:w-2/5 min-h-1/2s">
-            <img class="object-cover h-full w-full" :src="`http://185.211.170.2:5100/${newsObj.img}`" alt="">
+            <img class="object-cover h-full w-full" :src="`https://it-pro-back.onrender.com/api/${newsObj.img}`" alt="">
          </div>
       </div>
    </div>
