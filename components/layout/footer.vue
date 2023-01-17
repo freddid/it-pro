@@ -6,9 +6,9 @@
          <div class="flex items-center text-sm">
             Подписывайтесь на нас
             <div class="flex ml-20px space-x-10px">
-               <a href="#"><img class="w-30px" src="@/assets/imgs/socNet/tg.png" alt=""></a>
-               <a href="#"><img class="w-30px" src="@/assets/imgs/socNet/inst.png" alt=""></a>
-               <a href="#"><img class="w-30px" src="@/assets/imgs/socNet/yout.png" alt=""></a>
+               <a href="#"><img class="w-30px" src="@/assets/imgs/icons/socNet/tg.png" alt=""></a>
+               <a href="#"><img class="w-30px" src="@/assets/imgs/icons/socNet/inst.png" alt=""></a>
+               <a href="#"><img class="w-30px" src="@/assets/imgs/icons/socNet/yout.png" alt=""></a>
             </div>
          </div>
       </div>

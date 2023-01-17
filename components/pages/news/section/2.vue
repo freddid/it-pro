@@ -8,5 +8,6 @@
    </section>
 </template>
 <script setup>
-const newsArr = await(await fetch('http://185.211.170.2:5100/api/getNews')).json()
+await useDataStore().getNews()
+const newsArr = ref(useDataStore().news)
 </script>

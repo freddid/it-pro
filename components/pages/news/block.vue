@@ -1,14 +1,17 @@
 <template>
-   <div class="flex lg:flex-row flex-col justify-between">
-      <div class="lg:(mr-40px mb-0) mb-30px">
-         <h2 class="h2T mb-20px lg:mb-50px">{{ newsObj.title }}</h2>
-         <div class="text-lg">
-            {{ newsObj.content }}
+   <div class="relative overflow-hidden rounded-[10px]">
+      <div class="absolute top-0 left-0 w-full h-full bg-base-1/20"></div>
+      <div class="relative z-10 flex lg:(flex-row min-h-400px) min-h-600px flex-col-reverse justify-between">
+         <div class="content-block">
+            <UiSubtitle class="sm:text-11px">{{ new Date(newsObj.createdAt).toLocaleString('ru') }}</UiSubtitle>
+            <h2 class="h2T mb-20px lg:(mb-50px text-32px) text-20px">{{ newsObj.title }}</h2>
+            <div class="lg:text-lg">
+               {{ newsObj.content }}
+            </div>
          </div>
-      </div>
-      <div class="">
-         <img class="lg:(max-w-550px max-h-350px min-w-550px min-h-350px) object-cover"
-            :src="`http://185.211.170.2:5100/${newsObj.img}`" alt="">
+         <div class="lg:w-2/5 min-h-1/2s">
+            <img class="object-cover h-full w-full" :src="`http://185.211.170.2:5100/${newsObj.img}`" alt="">
+         </div>
       </div>
    </div>
 </template>
@@ -18,3 +21,9 @@ const props = defineProps({
    newsObj: Object
 })
 </script>
+
+<style scoped>
+.content-block {
+   @apply py-10px px-20px rounded-bl-[10px] min-h-1/2 rounded-br-[10px] border-2 border-t-transparent lg: (w-3/5 border-base-3 border-r-transparent rounded-tl-[10px] rounded-br-[0]);
+}
+</style>

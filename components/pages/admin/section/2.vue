@@ -1,31 +1,28 @@
 <template>
-   <div class="container">
-      <table class="table">
-         <thead>
-            <tr>
-               <th> №</th>
-               <th>Имя</th>
-               <th>Фамилия</th>
-               <th>Электронная почта</th>
-               <th>Дата записи</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr v-for="(userData, i) in usersData" :key="i">
-               <td>{{ ++i }}</td>
-               <td>{{ userData.name }}</td>
-               <td>{{ userData.lastName }}</td>
-               <td>{{ userData.email }}</td>
-               <td>{{ new Date(userData.createdAt).toLocaleString('ru') }}</td>
-            </tr>
-         </tbody>
-      </table>
-   </div>
+   <table class="table">
+      <thead>
+         <tr>
+            <th> №</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Электронная почта</th>
+            <th>Дата записи</th>
+         </tr>
+      </thead>
+      <tbody v-if="usersData.length">
+         <tr v-for="(userData, i) in usersData" :key="i">
+            <td>{{ ++i }}</td>
+            <td>{{ userData.name }}</td>
+            <td>{{ userData.lastName }}</td>
+            <td>{{ userData.email }}</td>
+            <td>{{ new Date(userData.createdAt).toLocaleString('ru') }}</td>
+         </tr>
+      </tbody>
+   </table>
 </template>
 <script setup>
-const props = defineProps({
-   usersData: Array
-})
+await useDataStore().getUsers()
+const usersData = ref(useDataStore().users)
 </script>
 <style lang="scss" scoped>
 .table {

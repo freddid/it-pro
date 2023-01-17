@@ -1,12 +1,41 @@
 <template>
    <div class="min-h-screen pt-72px">
-      <PagesAdminSection1 class="mt-40px" />
-      <PagesAdminSection2 :users-data="usersData" />
+      <h2 class="h2T text-center mt-80px mb-50px">{{ setMenu[showBlock] }}</h2>
+      <div class="container flex">
+         <div class="w-350px mr-40px">
+            <div v-for="(menu, i) in setMenu" :key="menu" @click="showBlock = i" class="menu-items"
+               :class="[showBlock == i ? 'text-base-2 bg-base-1' : '']">{{ menu }}
+            </div>
+         </div>
+         <div class="w-full relative">
+            <transition-group name="blocks">
+               <PagesAdminSection1 key="1" v-if="showBlock == 0" class="absolute w-full" />
+               <PagesAdminSection2 key="2" v-if="showBlock == 1" class="absolute w-full" />
+               <PagesAdminSection3 key="3" v-if="showBlock == 2" class="absolute w-full" />
+            </transition-group>
+         </div>
+      </div>
    </div>
 </template>
 <script setup>
+const setMenu = ['Установка даты', 'Список участников', 'Новости']
+const showBlock = ref(0)
 definePageMeta({
    layout: "admin",
 });
-const usersData = await(await fetch('http://185.211.170.2:5500/api/getUsers')).json()
 </script>
+<style>
+.menu-items {
+   @apply h-60px flex items-center px-10px text-lg border-base-1 last: border-none cursor-pointer border-b hover:text-base-3;
+}
+
+.blocks-enter-active,
+.blocks-leave-active {
+   transition: all 0.4s ease;
+}
+
+.blocks-enter,
+.blocks-leave-active {
+   opacity: 0;
+}
+</style>

@@ -3,7 +3,7 @@
       <div class="container flex flex-col lg:(items-center flex-row) ">
          <div class="mb-40px lg:mb-0">
             <UiSubtitle>Дата_Мероприятия</UiSubtitle>
-            <h2 class="h2T">Подсчет</h2>
+            <h2 class="h2T">До окончания</h2>
          </div>
          <div class="grid grid-cols-5 lg:(ml-50px flex-auto w-auto) w-full">
             <div v-for="t in date" :key="t[1]" class="text-center">
@@ -15,9 +15,9 @@
    </section>
 </template>
 <script setup>
-const finishDate = "2023-01-10T17:45:00+06:00"
+await useDataStore().getDate()
 const zero = date => date < 10 ? '0' + date : date
-const difD = () => new Date((Date.parse(finishDate) - new Date()))
+const difD = () => new Date((Date.parse(useDataStore().date) - new Date()))
 const dif = ref(difD());
 
 const timer = setInterval(() => difD() == 'Invalid Date' ? clearInterval(timer) : dif.value = difD(), 1000);

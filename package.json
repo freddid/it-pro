@@ -16,6 +16,10 @@
     "sass-loader": "^13.2.0"
   },
   "dependencies": {
-    "@vuepic/vue-datepicker": "^3.6.4"
+    "@nuxtjs/google-fonts": "^3.0.0-1",
+    "@pinia/nuxt": "^0.4.6",
+    "@vueform/multiselect": "^2.5.8",
+    "@vuepic/vue-datepicker": "^3.6.4",
+    "pinia": "^2.0.28"
   }
 }

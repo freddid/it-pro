@@ -37,18 +37,7 @@ const contacts = ref([
 
 const submit = async () => {
    if (!(name.value && lastName.value && email.value)) return
-
-   const response = await fetch('http://185.211.170.2:5100/api/addUser', {
-      method: 'POST',
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      headers: { 'Content-Type': 'application/json' },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer',
-      body: JSON.stringify({ name: name.value, lastName: lastName.value, email: email.value })
-   });
-
+   const response = await useDataStore().addUser({ name: name.value, lastName: lastName.value, email: email.value })
    if (response.status == 200) rightReg.value = true
 }
 
