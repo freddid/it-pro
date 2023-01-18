@@ -5,8 +5,3 @@
    <PagesMainSection4 />
    <PagesMainSection5 />
 </template>
-<script setup>
-</script>
-<style>
-
-</style>

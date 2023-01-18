@@ -1,5 +1,5 @@
 <template>
-   <div class="min-h-screen pt-72px">
+   <div v-if="load" class="min-h-screen pt-72px">
       <h2 class="h2T text-center mt-80px mb-50px">{{ setMenu[showBlock] }}</h2>
       <div class="container flex">
          <div class="w-350px mr-40px">
@@ -18,11 +18,21 @@
    </div>
 </template>
 <script setup>
+definePageMeta({
+   layout: "admin"
+})
+
 const setMenu = ['Установка даты', 'Список участников', 'Новости']
 const showBlock = ref(0)
-definePageMeta({
-   layout: "admin",
-});
+const load = ref(false)
+
+if (process.client) {
+   if (!localStorage.getItem('token')) {
+      navigateTo('/auth')
+   } else {
+      load.value = true
+   }
+}
 </script>
 <style>
 .menu-items {

@@ -1,6 +1,6 @@
 <template lang="">
   <ui-modal @close="$emit('close')">
-    <h3 class="text-center text-2xl mb-30px">Изменение новости</h3>
+    <h3 class="text-center text-2xl mb-30px">{{ actNews == 'N' ? 'Добавление' : 'Изменение' }} новости</h3>
     <div class="flex">
       <div class="w-1/2">
         <label for="text">Содержание</label>

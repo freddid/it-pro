@@ -2,8 +2,9 @@ export const useDataStore = defineStore('DataStore', {
    state: () => ({
       news: [],
       users: [],
-      date: null,
-      newsModal: false
+      date: '',
+      newsModal: false,
+      login: false,
    }),
 
    actions: {
@@ -28,6 +29,7 @@ export const useDataStore = defineStore('DataStore', {
                data[0].img = (await res.json()).imgPath
             }
 
+            data[0].token = localStorage.getItem('token')
             await fetch(`${baseUrl}/${url}`, {
                method: 'POST',
                mode: 'cors',
@@ -61,10 +63,14 @@ export const useDataStore = defineStore('DataStore', {
                headers: { 'Content-Type': 'application/json' },
                redirect: 'follow',
                referrerPolicy: 'no-referrer',
-               body: JSON.stringify({ date })
+               body: JSON.stringify({ date, token: localStorage.getItem('token') })
             });
-            if (res.msg = "Дата изменена") this.date = date
-            return res
+            const { msg } = await res.json()
+
+            if (msg == "Дата изменена") {
+               alert(msg)
+               this.date = date
+            }
          } catch (error) {
             alert(error)
          }
@@ -93,6 +99,30 @@ export const useDataStore = defineStore('DataStore', {
             alert(error)
          }
       },
+      async authSystem(data: object) {
+         try {
+            const res = await fetch(`${baseUrl}/auth`, {
+               method: 'POST',
+               mode: 'cors',
+               cache: 'no-cache',
+               credentials: 'same-origin',
+               headers: { 'Content-Type': 'application/json' },
+               redirect: 'follow',
+               referrerPolicy: 'no-referrer',
+               body: JSON.stringify(data)
+            });
+            const token = await res.json()
+
+            if (token.hash) {
+               localStorage.setItem('token', token.hash)
+               await navigateTo('/admin')
+            } else {
+               alert('Пароль или логин не правельный')
+            }
+         } catch (error) {
+            alert(error)
+         }
+      }
    },
 
    getters: {

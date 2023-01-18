@@ -11,7 +11,7 @@
          </div>
       </div>
       <button @click="saveDate" :disabled="actBtn" :class="[actBtn ? 'bg-base-1' : '']"
-         class="bg-base-3 py-10px px-20px rounded-10px text-base-2">{{ actBtn? 'Дата добавлена': 'Сохранить' }}</button>
+         class="bg-base-3 py-10px px-20px rounded-10px text-base-2">Сохранить</button>
    </div>
 </template>
 <script setup>
@@ -21,15 +21,9 @@ import '@vuepic/vue-datepicker/dist/main.css'
 await useDataStore().getDate()
 const actDate = ref(useDataStore().date)
 const date = ref(actDate.value)
-const actBtn = ref(false)
 
 const saveDate = async () => {
-   actBtn.value = true
    await useDataStore().addDate(date.value)
-
-   setTimeout(() => {
-      actBtn.value = false
-      actDate.value = useDataStore().date
-   }, 500);
+   actDate.value = useDataStore().date
 }
 </script>
