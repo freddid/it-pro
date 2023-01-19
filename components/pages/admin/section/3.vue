@@ -1,5 +1,5 @@
 <template>
-   <div class="space-y-20px max-h-[calc(100vh-300px)] pr-20px overflow-auto">
+   <div class="space-y-20px">
       <div class="flex justify-end">
          <button @click="actNews = 'N', title = '', content = ''"
             class="p-15px bg-base-3 rounded-[5px] text-base-2">Добавить

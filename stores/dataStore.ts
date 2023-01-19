@@ -3,7 +3,6 @@ export const useDataStore = defineStore('DataStore', {
       news: [],
       users: [],
       date: '',
-      login: false,
       baseUrl: 'https://it-pro-back.onrender.com'
    }),
 
@@ -15,7 +14,7 @@ export const useDataStore = defineStore('DataStore', {
             alert(error)
          }
       },
-      async changeNews({ data, url }: object) {
+      async changeNews({ data, url }: { data: string; url: number }) {
          try {
             if (data[1]) {
                const formData = new FormData();
