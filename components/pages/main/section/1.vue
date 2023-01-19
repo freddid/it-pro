@@ -3,7 +3,7 @@
       <div class="container h-full flex overflow-hidden items-center justify-center">
          <div class="">
             <UiSubtitle>ГГНТУ, Февраль 5-9 2023</UiSubtitle>
-            <PagesMainBlocksTitle />
+            <PagesMainTitle />
          </div>
       </div>
    </section>
