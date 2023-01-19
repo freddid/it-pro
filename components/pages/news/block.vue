@@ -1,6 +1,6 @@
 <template>
    <div class="card-block">
-      <div class="py-10px px-20px h-full lg:w-3/5">
+      <div class="py-10px px-15px min-h-300px h-full lg:(w-3/5 px-20px min-h-none)">
          <UiSubtitle class="sm:text-11px">{{ new Date(newsObj.createdAt).toLocaleString('ru') }}</UiSubtitle>
          <h2 class="h2T mb-20px lg:(mb-30px text-32px) text-20px">{{ newsObj.title }}</h2>
          <div class="lg:text-lg">
