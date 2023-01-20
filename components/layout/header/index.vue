@@ -1,5 +1,5 @@
 <template>
-   <header class="header" :class="{ 'show-m': showM }">
+   <header id="header" :class="{ 'show-m': showM }">
       <div class="container">
          <div class="flex justify-between items-center">
             <nuxt-link to="/" class="text-2xl font-bold uppercase">IT_<span class="text-base-3">Pro</span></nuxt-link>
@@ -30,7 +30,7 @@ const showM = ref(false)
    opacity: 0;
 }
 
-.header {
+#header {
    @apply py-15px fixed z-20 w-full sm: (absolute py-20px bg-transparent text-base-1) bg-base-1 text-base-2 transition-all max-h-72px;
 
    &.show-m {

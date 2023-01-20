@@ -1,73 +1,39 @@
 <template>
-   <table class="table">
-      <thead>
-         <tr>
-            <th> №</th>
-            <th>Имя</th>
-            <th>Фамилия</th>
-            <th>Электронная почта</th>
-            <th>Дата записи</th>
-         </tr>
-      </thead>
-      <tbody v-if="usersData.length">
-         <tr v-for="(userData, i) in usersData" :key="i">
-            <td>{{ ++i }}</td>
-            <td>{{ userData.name }}</td>
-            <td>{{ userData.lastName }}</td>
-            <td>{{ userData.email }}</td>
-            <td>{{ new Date(userData.createdAt).toLocaleString('ru') }}</td>
-         </tr>
-      </tbody>
-   </table>
+   <div>
+      <div class="flex mb-20px items-center">
+         <div class="mr-10px">Поле поиска:</div>
+         <select v-model="searchField" class="text-base-2 px-10px py-5px">
+            <option value="name">Имя</option>
+            <option value="lastName">Фамилия</option>
+            <option value="email"> Почта</option>
+            <option value="date">Дата</option>
+         </select>
+
+         <div class="mr-10px ml-30px">Поиск: </div>
+         <input type="text" class="text-base-2 px-10px py-5px" v-model="searchValue">
+      </div>
+      <Vue3EasyDataTable show-index :headers="headers" :items="items" alternating border-cell :rows-per-page="15"
+         :search-field="searchField" :search-value="searchValue" :rows-items="[15, 50, 100]" />
+   </div>
 </template>
 <script setup>
+import Vue3EasyDataTable from 'vue3-easy-data-table';
+import 'vue3-easy-data-table/dist/style.css';
 await useDataStore().getUsers()
+
 const usersData = ref(useDataStore().users)
+const searchField = ref("name");
+const searchValue = ref("");
+
+const headers = computed(() => [
+   { text: "Имя", value: "name", sortable: true },
+   { text: "Фамилия", value: "lastName", sortable: true },
+   { text: "Электронная почта", value: "email", sortable: true },
+   { text: "Дата", value: "date", sortable: true },
+]);
+
+const items = computed(() => usersData.value.map(el => {
+   el.date = new Date(el.createdAt).toLocaleString('ru')
+   return el
+}));
 </script>
-<style lang="scss" scoped>
-.table {
-   width: 100%;
-   border: none;
-   background: #fff;
-   border-radius: 10px;
-   color: #000;
-   overflow: hidden;
-}
-
-.table tr:hover {
-   @apply !bg-base-3 cursor-pointer;
-}
-
-.table thead th {
-   font-weight: bold;
-   text-align: left;
-   border: none;
-   padding: 10px 15px;
-   background: #d8d8d8;
-   border-left: 1px solid #ddd;
-   border-right: 1px solid #ddd;
-}
-
-.table tbody td {
-   text-align: left;
-   border-left: 1px solid #ddd;
-   border-right: 1px solid #ddd;
-   padding: 10px 15px;
-   font-size: 14px;
-   vertical-align: top;
-}
-
-.table thead tr th:first-child,
-.table tbody tr td:first-child {
-   border-left: none;
-}
-
-.table thead tr th:last-child,
-.table tbody tr td:last-child {
-   border-right: none;
-}
-
-.table tbody tr:nth-child(even) {
-   background: #f3f3f3;
-}
-</style>

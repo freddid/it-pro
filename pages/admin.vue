@@ -7,7 +7,7 @@
                :class="[showBlock == i ? 'text-base-2 bg-base-1' : '']">{{ menu }}
             </div>
          </div>
-         <div class="w-full relative pr-20px overflow-auto h-[calc(100vh-300px)]">
+         <div class="w-full relative">
             <transition-group name="blocks">
                <PagesAdminSection1 key="1" v-if="showBlock == 0" class="absolute w-full" />
                <PagesAdminSection2 key="2" v-if="showBlock == 1" class="absolute w-full" />
