@@ -36,7 +36,7 @@ if (process.client) {
 </script>
 <style>
 .menu-items {
-   @apply lg: (text-lg justify-start border-b) border-r justify-center h-60px w-full flex items-center px-10px border-base-1 last: border-none cursor-pointer hover:text-base-3;
+   @apply lg: (text-lg justify-start border-b border-r-0) border-r justify-center h-60px w-full flex items-center px-10px border-base-1 last: border-none cursor-pointer hover:text-base-3;
 }
 
 .blocks-enter-active,

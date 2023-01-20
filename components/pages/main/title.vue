@@ -1,9 +1,11 @@
 <template>
-   <div class="title-container">
-      <div class="glitch" data-text="IT_PRO">IT_PRO</div>
-      <div class="glow">IT-PRO</div>
+   <div>
+      <div class="title-container">
+         <div class="glitch" data-text="IT_PRO">IT_PRO</div>
+         <div class="glow">IT-PRO</div>
+      </div>
+      <div class="scanlines"></div>
    </div>
-   <div class="scanlines"></div>
 </template>
 <script>
 </script>
