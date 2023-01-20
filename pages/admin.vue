@@ -1,8 +1,8 @@
 <template>
    <div v-if="load" class="min-h-screen pt-72px">
       <h2 class="h2T text-center mt-80px mb-50px">{{ setMenu[showBlock] }}</h2>
-      <div class="container flex">
-         <div class="w-350px mr-40px">
+      <div class="container flex flex-col lg:flex-row">
+         <div class="lg:(w-350px block mr-40px mb-0) mb-30px flex">
             <div v-for="(menu, i) in setMenu" :key="menu" @click="showBlock = i" class="menu-items"
                :class="[showBlock == i ? 'text-base-2 bg-base-1' : '']">{{ menu }}
             </div>
@@ -36,7 +36,7 @@ if (process.client) {
 </script>
 <style>
 .menu-items {
-   @apply h-60px flex items-center px-10px text-lg border-base-1 last: border-none cursor-pointer border-b hover:text-base-3;
+   @apply lg: (text-lg justify-start border-b) border-r justify-center h-60px w-full flex items-center px-10px border-base-1 last: border-none cursor-pointer hover:text-base-3;
 }
 
 .blocks-enter-active,

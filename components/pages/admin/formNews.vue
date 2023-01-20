@@ -1,8 +1,8 @@
 <template lang="">
   <ui-modal @close="$emit('close')">
     <h3 class="text-center text-2xl mb-30px">{{ actNews == 'N' ? 'Добавление' : 'Изменение' }} новости</h3>
-    <div class="flex">
-      <div class="w-1/2">
+    <div class="flex lg:flex-row flex-col">
+      <div class="lg:w-1/2">
         <label for="text">Содержание</label>
         <textarea
           required
@@ -12,7 +12,7 @@
           placeholder="Содержание"
         ></textarea>
       </div>
-      <div class="w-1/2 ml-20px flex flex-col justify-between">
+      <div class="lg:(ml-20px w-1/2) flex flex-col justify-between">
         <div>
           <label for="title">Заголово</label>
           <input
@@ -34,7 +34,7 @@
         </div>
         <button
           @click="changeNews"
-          class="bg-base-2 text-base-1 rounded-[5px] p-10px"
+          class="bg-base-2 text-base-1 rounded-[5px] p-10px lg:mt-0 mt-30px"
         >
           {{ actNews == 'N' ? 'Добавить' : 'Изменить' }}
         </button>

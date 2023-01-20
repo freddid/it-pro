@@ -1,6 +1,6 @@
 <template>
-   <div class="flex justify-between items-center">
-      <div class="flex">
+   <div class="flex justify-between items-center lg:flex-row flex-col">
+      <div class="flex w-full lg:(flex-row mb-0) mb-20px flex-col">
          <div class="mr-40px">
             <label class="mb-5px">До конца регистрации</label>
             <div class="mb-10px text-2xl text-base-3 font-bold">{{ new Date(actDate).toLocaleString('ru') }}</div>

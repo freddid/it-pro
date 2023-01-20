@@ -1,6 +1,6 @@
 <template>
    <div>
-      <div class="flex mb-20px items-center">
+      <div class="flex mb-20px lg:(items-center flex-row) flex-col">
          <div class="mr-10px">Поле поиска:</div>
          <select v-model="searchField" class="text-base-2 px-10px py-5px">
             <option value="name">Имя</option>
@@ -9,7 +9,7 @@
             <option value="date">Дата</option>
          </select>
 
-         <div class="mr-10px ml-30px">Поиск: </div>
+         <div class="mr-10px lg:ml-30px">Поиск: </div>
          <input type="text" class="text-base-2 px-10px py-5px" v-model="searchValue">
       </div>
       <Vue3EasyDataTable show-index :headers="headers" :items="items" alternating border-cell :rows-per-page="15"
@@ -26,7 +26,7 @@ const searchField = ref("name");
 const searchValue = ref("");
 
 const headers = computed(() => [
-   { text: "Имя", value: "name", sortable: true },
+   { text: "Имя", value: "name", sortable: true, fixed: true },
    { text: "Фамилия", value: "lastName", sortable: true },
    { text: "Электронная почта", value: "email", sortable: true },
    { text: "Дата", value: "date", sortable: true },
