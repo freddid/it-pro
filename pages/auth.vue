@@ -26,7 +26,7 @@ const send = async () => {
 }
 
 if (process.client) {
-   if (localStorage.getItem('token')) {
+   if (sessionStorage.getItem('token')) {
       navigateTo('/admin')
    } else {
       load.value = true

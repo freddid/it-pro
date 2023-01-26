@@ -1,4 +1,8 @@
 <template>
-   <h1 class="h2T sm:min-h-[calc(100vh-140px)] min-h-[calc(100vh-230px)] flex justify-center items-center">ФОТО АРХИВ
-   </h1>
+   <section class="lg:pt-72px pt-62px">
+      <div class="container flex flex-col items-center pt-100px">
+         <UiSubtitle>Галлерея</UiSubtitle>
+         <h2 class="h2T mb-30px">Фото архив</h2>
+      </div>
+   </section>
 </template>

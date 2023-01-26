@@ -1,5 +1,5 @@
 <template>
-   <section>
+   <section v-if="newsArr.length">
       <div class="container sm:mb-250px mb-120px flex lg:flex-row flex-col">
          <div class="lg:(mr-40px w-3/5) mb-30px">
             <UiSubtitle>Последняя_Новость</UiSubtitle>
@@ -7,7 +7,7 @@
             <div class="text-lg">{{ lastNew.content }}</div>
          </div>
          <div class="lg:w-3/5">
-            <img class="w-full object-cover" src="@/assets/imgs/last-new.jpeg" alt="">
+            <img class="w-full object-cover" src="@/assets/imgs/last-new.jpeg" alt="" />
          </div>
       </div>
    </section>

@@ -27,7 +27,7 @@ const showBlock = ref(0)
 const load = ref(false)
 
 if (process.client) {
-   if (!localStorage.getItem('token')) {
+   if (!sessionStorage.getItem('token')) {
       navigateTo('/auth')
    } else {
       load.value = true

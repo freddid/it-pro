@@ -26,7 +26,7 @@ export const useDataStore = defineStore('DataStore', {
                data[0].img = (await res.json()).imgPath
             }
 
-            data[0].token = localStorage.getItem('token')
+            data[0].token = sessionStorage.getItem('token')
             await fetch(`${this.baseUrl}/api/${url}`, {
                method: 'POST',
                headers: { 'Content-Type': 'application/json' },
@@ -50,7 +50,7 @@ export const useDataStore = defineStore('DataStore', {
             const res = await fetch(`${this.baseUrl}/api/chooseTime`, {
                method: 'POST',
                headers: { 'Content-Type': 'application/json' },
-               body: JSON.stringify({ date, token: localStorage.getItem('token') })
+               body: JSON.stringify({ date, token: sessionStorage.getItem('token') })
             });
             const { msg } = await res.json()
 
@@ -90,7 +90,7 @@ export const useDataStore = defineStore('DataStore', {
             const token = await res.json()
 
             if (token.hash) {
-               localStorage.setItem('token', token.hash)
+               sessionStorage.setItem('token', token.hash)
                await navigateTo('/admin')
             } else {
                alert('Пароль или логин не правельный')
