@@ -8,8 +8,7 @@
          </div>
       </div>
       <div class="lg:(w-2/5 h-auto) h-300px">
-         <img class="object-cover h-full w-full" src="@/assets/imgs/block-2-1.jpg" alt="">
-         <!-- :src="`${useDataStore().baseUrl}${newsObj.img}`" -->
+         <img class="object-cover h-full w-full" :src="`${useDataStore().baseUrl}${newsObj.img}`" alt="">
       </div>
    </div>
 </template>

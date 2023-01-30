@@ -3,7 +3,7 @@ export const useDataStore = defineStore('DataStore', {
       news: [],
       users: [],
       date: '',
-      baseUrl: 'https://it-pro-back.onrender.com'
+      baseUrl: 'https://itpro-gstou.ru'
    }),
 
    actions: {

@@ -7,7 +7,7 @@
             <div class="text-lg">{{ lastNew.content }}</div>
          </div>
          <div class="lg:w-3/5">
-            <img class="w-full object-cover" src="@/assets/imgs/block-2-1.jpg" alt="" />
+            <img class="w-full object-cover" :src="`${useDataStore().baseUrl}${newsObj.img}`" alt="" />
          </div>
       </div>
    </section>
