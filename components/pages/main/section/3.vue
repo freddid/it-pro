@@ -2,7 +2,7 @@
    <section v-if="difD" class=" sm:mb-250px mb-120px">
       <div class="container flex flex-col lg:(items-center flex-row) ">
          <div class="mb-40px lg:mb-0">
-            <UiSubtitle>Дата_Мероприятия</UiSubtitle>
+            <UiSubtitle>Регистрация</UiSubtitle>
             <h2 class="h2T">До окончания</h2>
          </div>
          <div class="grid grid-cols-5 lg:(ml-50px flex-auto w-auto) w-full">

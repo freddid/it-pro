@@ -2,7 +2,7 @@
    <section>
       <div class="container flex sm:mb-250px mb-120px justify-between flex-col lg:(flex-row) lg:space-y-0 space-y-60px">
          <div class="">
-            <UiSubtitle>Свяжитесь_С_Нами</UiSubtitle>
+            <UiSubtitle>Оставьте_Заявку</UiSubtitle>
             <h2 class="h2T">Запись на <br> мероприятие</h2>
          </div>
          <form class="flex flex-col lg:max-w-400px space-y-30px w-full" @submit.prevent="submit">
