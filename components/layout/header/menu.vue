@@ -1,9 +1,9 @@
 <template>
    <nav class="header-menu">
       <ul>
-         <li><nuxt-link to="/">Главная</nuxt-link></li>
-         <li><nuxt-link to="./news">Новости</nuxt-link></li>
-         <li><nuxt-link to="./gallery">Фото архив</nuxt-link></li>
+         <li><nuxt-link @click="$emit('close')" to="/">Главная</nuxt-link></li>
+         <li><nuxt-link @click="$emit('close')" to="/news">Новости</nuxt-link></li>
+         <li><nuxt-link @click="$emit('close')" to="/gallery">Фото архив</nuxt-link></li>
       </ul>
    </nav>
 </template>

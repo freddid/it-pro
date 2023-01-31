@@ -9,7 +9,7 @@
             <layoutHeaderMenu class="sm:block hidden" />
          </div>
          <transition name="home">
-            <layoutHeaderMenu v-if="showM" class="sm:hidden block" />
+            <layoutHeaderMenu v-if="showM" @close="showM = false" class="sm:hidden block" />
          </transition>
       </div>
    </header>
