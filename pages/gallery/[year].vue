@@ -1,6 +1,6 @@
 <template>
    <section class="lg:pt-72px pt-62px">
-      <div class="container flex flex-col items-center md:pt-100px pt-40px">
+      <div class="flex flex-col items-center md:(pt-100px container) pt-40px">
          <nuxt-link to="/gallery" class="text-base-3 text-11px mb-20px italic font-pres">
             &lt; Вернуться
          </nuxt-link>
@@ -8,10 +8,10 @@
          <viewer :options="options" :images="useDataStore().gallery[useRoute().params.year]"
             class="viewer md:mb-100px mb-50px" ref="viewer">
             <template #default="scope">
-               <div class="grid md:grid-cols-4 grid-cols-2 gap-10px">
+               <div class="grid md:grid-cols-4 grid-cols-3 gap-3px">
                   <div v-for="src in scope.images" :key="src" class="overflow-hidden">
                      <img
-                        class="w-full md:h-300px h-100px object-cover transform hover:scale-110 transition-all cursor-pointer"
+                        class="w-full md:h-300px h-120px object-cover transform hover:scale-110 transition-all cursor-pointer"
                         :src="src">
                   </div>
                </div>
@@ -50,5 +50,14 @@ const options = {
 
 .viewer-backdrop {
    background: #000;
+}
+
+.viewer-button {
+   width: 100px;
+   height: 100px;
+}
+
+.viewer-button::before {
+   transform: scale(1.5);
 }
 </style>
