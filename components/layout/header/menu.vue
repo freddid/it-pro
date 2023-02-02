@@ -1,12 +1,21 @@
 <template>
    <nav class="header-menu">
       <ul>
-         <li><nuxt-link @click="$emit('close')" to="/">Главная</nuxt-link></li>
-         <li><nuxt-link @click="$emit('close')" to="/news">Новости</nuxt-link></li>
-         <li><nuxt-link @click="$emit('close')" to="/gallery">Фото архив</nuxt-link></li>
+         <li v-for="menu in menuList" :key="menu.to">
+            <nuxt-link @click="$emit('close')" :to="menu.to">{{ menu.txt }}</nuxt-link>
+         </li>
       </ul>
    </nav>
 </template>
+
+<script setup>
+const menuList = [
+   { to: '/', txt: 'Главная' },
+   { to: '/news', txt: 'Новости' },
+   { to: '/gallery', txt: 'Фото архив' }
+]
+</script>
+
 <styles lang="scss">
 .header-menu ul {
    @apply sm: (space-x-50px space-y-0 flex-row p-0) pt-30px space-y-20px flex-col justify-between flex uppercase font-bold;
