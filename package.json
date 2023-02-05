@@ -23,6 +23,7 @@
     "lightgallery-vue": "^0.0.2",
     "pinia": "^2.0.28",
     "v-viewer": "^3.0.11",
+    "vue-kinesis": "^2.0.5",
     "vue3-easy-data-table": "^1.5.27"
   }
 }
