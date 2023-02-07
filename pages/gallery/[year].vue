@@ -1,10 +1,14 @@
 <template>
    <section class="lg:pt-72px pt-62px">
       <div class="flex flex-col items-center md:(pt-100px container) pt-40px">
-         <nuxt-link to="/gallery" class="text-base-3 text-11px mb-20px italic font-pres">
-            &lt; Вернуться
-         </nuxt-link>
-         <h2 class="h2T md:mb-120px mb-50px">{{ useRoute().params.year }}</h2>
+
+         <h2 class="h2T md:mb-120px mb-50px flex relative w-full items-center justify-end md:justify-center px-40px">
+            <nuxt-link to="/gallery" class="text-base-3 absolute text-11px left-20px italic font-pres">
+               &lt; Вернуться
+            </nuxt-link>
+            {{ useRoute().params.year }}
+         </h2>
+
          <viewer :options="options" :images="useDataStore().gallery[useRoute().params.year]"
             class="viewer md:mb-100px mb-50px" ref="viewer">
             <template #default="scope">

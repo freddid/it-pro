@@ -7,12 +7,12 @@
             <div @click="$router.push(`/gallery/${i}`)" v-for="(image, i) in useDataStore().gallery" :key="i"
                class="text-2xl cursor-pointer">
                <div class="relative mb-20px z-0 hover:z-10">
-                  <kinesis-container class=" h-200px">
+                  <kinesis-container class=" h-200px w-4/5 m-auto">
                      <kinesis-element tag="img" class="w-full rounded-[20px] object-cover h-full" :src="image[0]"
-                        :strength="10" type="depth" />
-                     <kinesis-element tag="img" :src="image[1]" :strength="-10" type="rotate" transformOrigin="50% 400%"
+                        :strength="5" type="depth" />
+                     <kinesis-element tag="img" :src="image[1]" :strength="-5" type="rotate" transformOrigin="50% 100%"
                         axis="x" class="-z-2 top-0 left-0 object-cover rounded-[20px] w-full h-full absolute" />
-                     <kinesis-element tag="img" :src="image[2]" :strength="10" type="rotate" transformOrigin="50% 400%"
+                     <kinesis-element tag="img" :src="image[2]" :strength="5" type="rotate" transformOrigin="50% 100%"
                         axis="x" class="-z-1 top-0 left-0 object-cover rounded-[20px] w-full h-full absolute" />
                   </kinesis-container>
                   <!-- <img class="w-full object-cover lg:h-300px md:h-200px h-[50vw]" :src="image[0]" alt="">
