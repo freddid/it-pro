@@ -20,6 +20,7 @@
     "@pinia/nuxt": "^0.4.6",
     "@vueform/multiselect": "^2.5.8",
     "@vuepic/vue-datepicker": "^3.6.4",
+    "aos": "^2.3.4",
     "lightgallery-vue": "^0.0.2",
     "pinia": "^2.0.28",
     "v-viewer": "^3.0.11",

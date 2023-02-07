@@ -3,22 +3,6 @@ export const useDataStore = defineStore('DataStore', {
       news: [],
       users: [],
       gallery: {
-         2022: [
-            "https://picsum.photos/seed/fred1/1700/900",
-            "https://picsum.photos/seed/fred2/1920/1200",
-            "https://picsum.photos/seed/fred3/1560/900",
-            "https://picsum.photos/seed/fred4/1440/1000",
-            "https://picsum.photos/seed/fred5/1920/1080",
-            "https://picsum.photos/seed/fred6/1200/800",
-            "https://picsum.photos/seed/fred7/1600/800",],
-         2021: [
-            "https://picsum.photos/seed/fred8/1700/900",
-            "https://picsum.photos/seed/fred9/1920/1200",
-            "https://picsum.photos/seed/fre1/1560/900",
-            "https://picsum.photos/seed/fre2/1440/1000",
-            "https://picsum.photos/seed/fre3/1920/1080",
-            "https://picsum.photos/seed/fre4/1200/800",
-            "https://picsum.photos/seed/fre5/1600/800",],
          2020: [
             "https://picsum.photos/1700/900",
             "https://picsum.photos/1920/1200",
@@ -27,6 +11,22 @@ export const useDataStore = defineStore('DataStore', {
             "https://picsum.photos/1920/1080",
             "https://picsum.photos/1200/800",
             "https://picsum.photos/1600/800",],
+         2021: [
+            "https://picsum.photos/seed/fred8/1700/900",
+            "https://picsum.photos/seed/fred9/1920/1200",
+            "https://picsum.photos/seed/fre1/1560/900",
+            "https://picsum.photos/seed/fre2/1440/1000",
+            "https://picsum.photos/seed/fre3/1920/1080",
+            "https://picsum.photos/seed/fre4/1200/800",
+            "https://picsum.photos/seed/fre5/1600/800",],
+         2022: [
+            "https://picsum.photos/seed/fred1/1700/900",
+            "https://picsum.photos/seed/fred2/1920/1200",
+            "https://picsum.photos/seed/fred3/1560/900",
+            "https://picsum.photos/seed/fred4/1440/1000",
+            "https://picsum.photos/seed/fred5/1920/1080",
+            "https://picsum.photos/seed/fred6/1200/800",
+            "https://picsum.photos/seed/fred7/1600/800",],
       },
       date: '',
       baseUrl: 'https://itpro-gstou.ru'

@@ -1,5 +1,5 @@
 <template>
-   <section class="relative -top-15vh  sm:mb-250px mb-120px">
+   <section class="relative -top-15vh  sm:mb-250px mb-50px">
       <div class="container flex flex-col items-start lg:flex-row">
          <div class="lg:(w-1/2 m-0) mb-40px">
             <UiSubtitle>Опыт_Написания</UiSubtitle>
@@ -14,11 +14,15 @@
                экспертами в области инноваций и узнайте больше о последних тенденциях развития с 5 по 9 сентября.
             </div>
          </div>
-         <div class="relative ml-0 mr-60px lg:(ml-30px mr-60px justify-end w-1/2)">
-            <img src="@/assets/imgs/block-2-1.jpg" alt="">
-            <img class="absolute w-full h-full object-cover top-130px left-50px" src="@/assets/imgs/block-2-2.jpg"
-               alt="">
-         </div>
+         <kinesis-container
+            class="relative ml-0 mr-60px lg:(ml-30px mr-60px justify-end w-1/2) children:rounded-[20px]">
+            <kinesis-element tag="img" src="/block-2-1.jpg" :strength="10" type="depth" />
+            <kinesis-element tag="img" src="/block-2-2.jpg" :strength="-10" type="depth_inv"
+               class="absolute w-full h-full object-cover lg:(top-130px left-50px) top-30px left-30px" />
+         </kinesis-container>
       </div>
    </section>
 </template>
+<script setup>
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
+</script>
