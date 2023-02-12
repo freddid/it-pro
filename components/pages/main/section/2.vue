@@ -18,7 +18,7 @@
             class="relative ml-0 mr-60px lg:(ml-30px mr-60px justify-end w-1/2) children:rounded-[20px]">
             <kinesis-element tag="img" src="/block-2-1.jpg" :strength="10" type="depth" />
             <kinesis-element tag="img" src="/block-2-2.jpg" :strength="-10" type="depth_inv"
-               class="absolute w-full h-full object-cover lg:(top-130px left-50px) top-30px left-30px" />
+               class="absolute w-full h-full object-cover lg:(top-130px left-50px) top-40px left-40px" />
          </kinesis-container>
       </div>
    </section>
