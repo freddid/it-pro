@@ -3,7 +3,7 @@
       <div class="flex flex-col items-center md:(pt-100px container) pt-40px">
 
          <h2 class="h2T md:mb-120px mb-50px flex relative w-full items-center justify-end md:justify-center px-40px">
-            <nuxt-link to="/gallery" class="text-base-3 absolute text-11px left-20px italic font-pres">
+            <nuxt-link to="/gallery" class="text-base-3 absolute text-11px lg:text-14px left-20px italic font-pres">
                &lt; Вернуться
             </nuxt-link>
             {{ useRoute().params.year }}
