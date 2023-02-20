@@ -2,32 +2,7 @@ export const useDataStore = defineStore('DataStore', {
    state: () => ({
       news: [],
       users: [],
-      gallery: {
-         2020: [
-            "https://picsum.photos/1700/900",
-            "https://picsum.photos/1920/1200",
-            "https://picsum.photos/1560/900",
-            "https://picsum.photos/1440/1000",
-            "https://picsum.photos/1920/1080",
-            "https://picsum.photos/1200/800",
-            "https://picsum.photos/1600/800",],
-         2021: [
-            "https://picsum.photos/seed/fred8/1700/900",
-            "https://picsum.photos/seed/fred9/1920/1200",
-            "https://picsum.photos/seed/fre1/1560/900",
-            "https://picsum.photos/seed/fre2/1440/1000",
-            "https://picsum.photos/seed/fre3/1920/1080",
-            "https://picsum.photos/seed/fre4/1200/800",
-            "https://picsum.photos/seed/fre5/1600/800",],
-         2022: [
-            "https://picsum.photos/seed/fred1/1700/900",
-            "https://picsum.photos/seed/fred2/1920/1200",
-            "https://picsum.photos/seed/fred3/1560/900",
-            "https://picsum.photos/seed/fred4/1440/1000",
-            "https://picsum.photos/seed/fred5/1920/1080",
-            "https://picsum.photos/seed/fred6/1200/800",
-            "https://picsum.photos/seed/fred7/1600/800",],
-      },
+      gallery: {},
       date: '',
       baseUrl: 'https://itpro-gstou.ru'
    }),
@@ -52,14 +27,48 @@ export const useDataStore = defineStore('DataStore', {
                data[0].img = (await res.json()).imgPath
             }
 
-            data[0].token = sessionStorage.getItem('token')
             await fetch(`${this.baseUrl}/api/${url}`, {
                method: 'POST',
-               headers: { 'Content-Type': 'application/json' },
+               headers: { 'Content-Type': 'application/json', 'Authorization': sessionStorage.getItem('token') },
                body: JSON.stringify(data[0]),
             });
 
-            this.getNews()
+            await this.getNews()
+         } catch (error) {
+            alert(error)
+         }
+      },
+      async getGalleries() {
+         try {
+            this.gallery = await (await fetch(`${this.baseUrl}/api/getGalleries`)).json()
+         } catch (error) {
+            alert(error)
+         }
+      },
+      async addGallery(data: Object) {
+         try {
+            const formData = new FormData();
+            formData.append('year', data.year)
+            for (let i = 0; i < data.files.length; i++) {
+               formData.append('img-' + i, data.files[i])
+            }
+
+            await fetch(`${this.baseUrl}/api/addGallery`, {
+               method: 'POST',
+               body: formData,
+            })
+            alert('Картинки добавлены')
+         } catch (error) {
+            alert(error)
+         }
+      },
+      async delImg(url: string) {
+         try {
+            this.gallery = await (await fetch(`${this.baseUrl}/api/deleteImage`, {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json', 'Authorization': sessionStorage.getItem('token') },
+               body: JSON.stringify({ img: url }),
+            })).json()
          } catch (error) {
             alert(error)
          }
@@ -75,8 +84,8 @@ export const useDataStore = defineStore('DataStore', {
          try {
             const res = await fetch(`${this.baseUrl}/api/chooseTime`, {
                method: 'POST',
-               headers: { 'Content-Type': 'application/json' },
-               body: JSON.stringify({ date, token: sessionStorage.getItem('token') })
+               headers: { 'Content-Type': 'application/json', 'Authorization': sessionStorage.getItem('token') },
+               body: JSON.stringify(date)
             });
             const { msg } = await res.json()
 

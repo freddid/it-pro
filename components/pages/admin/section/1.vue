@@ -4,9 +4,10 @@
          <label>Укажите дату окончания</label>
          <Datepicker class="mt-5px" locale="ru" text-input v-model="date" select-text="Выбрать" cancel-text="Закрыть" />
       </div>
-      <div>
+      <div class="opacity-50 relative">
+         <div class="absolute w-full h-full top-0 left-0 cursor-not-allowed z-10" title="Недоступно"></div>
          <label>Укажите период проведения</label>
-         <Datepicker :enable-time-picker="false" locale="ru" class="mt-5px" :partial-range="false" range
+         <Datepicker :enable-time-picker="false" disabled locale="ru" class="mt-5px" :partial-range="false" range
             v-model="rangeDate" select-text="Выбрать" cancel-text="Закрыть" />
       </div>
       <div class="mr-40px">

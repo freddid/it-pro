@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   ],
   modules: [
     'nuxt-windicss',
-    ['@pinia/nuxt',{autoImports: ['defineStore', 'acceptHMRUpdate']}],
+    ['@pinia/nuxt', { autoImports: ['defineStore', 'acceptHMRUpdate'] }],
   ],
   build: {
     transpile: ['@vuepic/vue-datepicker']

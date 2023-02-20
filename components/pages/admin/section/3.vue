@@ -1,6 +1,6 @@
 <template>
    <div>
-      <div class="space-y-20px">
+      <div class="space-y-10px">
          <div class="flex justify-end">
             <button @click="actNews = 'N', title = '', content = ''"
                class="p-15px bg-base-3 rounded-[5px] text-base-2">Добавить

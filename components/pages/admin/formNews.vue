@@ -15,7 +15,7 @@
           ></textarea>
         </div>
         <div class="lg:(ml-20px w-1/2) flex flex-col justify-between">
-          <div class="">
+          <div>
             <label for="title">Заголово</label>
             <input
               required
@@ -26,7 +26,7 @@
               name="title"
             />
           </div>
-          <div class="input-file">
+          <div class="input-file before: h-300px my-10px">
             <img class="h-full w-full object-cover" v-if="prevImg || !img" :src="prevImg" alt="">
             <input
               class="absolute w-full h-full top-0 left-0 opacity-0 cursor-pointer"
@@ -81,13 +81,13 @@ const changeNews = async () => {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .input-file {
-  @apply h-300px my-10px relative hover: before:bg-opacity-70;
+  @apply relative hover: before:bg-opacity-70;
 
   &:before {
     content: 'Выберите картинку';
-    @apply flex justify-center transition-all items-center text-base-1 text-4xl absolute top-0 left-0 bg-base-2/40 w-full h-full;
+    @apply flex justify-center transition-all items-center text-base-1 absolute top-0 left-0 bg-base-2/40 w-full h-full;
   }
 }
 </style>

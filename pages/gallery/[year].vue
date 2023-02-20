@@ -9,14 +9,14 @@
             {{ useRoute().params.year }}
          </h2>
 
-         <viewer :options="options" :images="useDataStore().gallery[useRoute().params.year]"
-            class="viewer md:mb-100px mb-50px" ref="viewer">
+         <viewer :options="options" :images="state.gallery[useRoute().params.year]" class="viewer md:mb-100px mb-50px"
+            ref="viewer">
             <template #default="scope">
                <div class="grid md:grid-cols-4 grid-cols-3 gap-3px">
                   <div v-for="src in scope.images" :key="src" class="overflow-hidden">
                      <img
                         class="w-full md:h-300px h-120px object-cover transform hover:scale-110 transition-all cursor-pointer"
-                        :src="src">
+                        :src="`${state.baseUrl}/${src}`">
                   </div>
                </div>
             </template>
@@ -27,6 +27,8 @@
 <script setup>
 import 'viewerjs/dist/viewer.css'
 import { component as Viewer } from "v-viewer"
+const state = useDataStore()
+await state.getGalleries()
 
 const options = {
    "movable": false, "toolbar": {
