@@ -57,6 +57,8 @@ export const useDataStore = defineStore('DataStore', {
                method: 'POST',
                body: formData,
             })
+
+            await this.getGalleries()
             alert('Картинки добавлены')
          } catch (error) {
             alert(error)
@@ -64,11 +66,26 @@ export const useDataStore = defineStore('DataStore', {
       },
       async delImg(url: string) {
          try {
-            this.gallery = await (await fetch(`${this.baseUrl}/api/deleteImage`, {
+            await fetch(`${this.baseUrl}/api/deleteImage`, {
                method: 'POST',
                headers: { 'Content-Type': 'application/json', 'Authorization': sessionStorage.getItem('token') },
                body: JSON.stringify({ img: url }),
-            })).json()
+            })
+
+            await this.getGalleries()
+         } catch (error) {
+            alert(error)
+         }
+      },
+      async delGallery(year: string) {
+         try {
+            await fetch(`${this.baseUrl}/api/deleteGallery`, {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json', 'Authorization': sessionStorage.getItem('token') },
+               body: JSON.stringify({ year }),
+            })
+
+            await this.getGalleries()
          } catch (error) {
             alert(error)
          }

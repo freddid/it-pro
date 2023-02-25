@@ -23,7 +23,7 @@
                   {{ i }}
                </div>
                <div class="flex space-x-10px children:(cursor-pointer p-10px bg-base-3 rounded-[3px])">
-                  <button class="disabled:opacity-40" :disabled="actBtn" @click="del(item)">
+                  <button class="disabled:opacity-40" :disabled="actBtn" @click="delGallery(i)">
                      <img src="@/assets/imgs/icons/del.png" alt="">
                   </button>
                </div>
@@ -73,7 +73,11 @@ const addImg = async (item, imgs) => {
 }
 
 const delImg = async (url) => {
-   if (confirm('Вы хотите удалить эту картинку?')) await state.delImg(url)
+   if (confirm('Вы действительно хотите удалить эту картинку?')) await state.delImg(url)
+}
+
+const delGallery = async (i) => {
+   if (confirm('Вы действительно хотите удалить этот фотоархив?')) await state.delGallery(i)
 }
 </script>
 
