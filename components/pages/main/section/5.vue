@@ -12,10 +12,12 @@
             <div>
                <button :class="[rightReg ? 'bg-base-1' : 'bg-base-3']" :disabled="rightReg"
                   class="p-20px text-base-2 rounded-[40px] hover:bg-base-1 transition-all">
-                  {{ rightReg?'Теперь вы участник!': 'Отправить' }}</button>
+                  {{ rightReg ? 'Теперь вы участник!' : 'Отправить' }}</button>
                <div class="children:text-base-3 text-xs mt-10px font-mons">
-                  Нажимая на кнопку "Отправить" вы подтверждаете ознакомление с <a href="#">Общими правилами проведения
-                     мероприятия</a> и с <a href="#">Условиями обработки персональных данных</a>
+                  Нажимая на кнопку "Отправить" вы подтверждаете ознакомление с <nuxt-link to="/documents">Общими правилами
+                     проведения
+                     мероприятия</nuxt-link> и с <nuxt-link to="/documents">Условиями обработки персональных
+                     данных</nuxt-link>
                </div>
             </div>
          </form>
@@ -34,7 +36,7 @@ const lastName = ref('')
 const email = ref('')
 const rightReg = ref(false)
 const contacts = ref([
-   ['Телефон', "<a href='tel:+7(871)222-36-07'>+7(871)222-36-07</a>"],
+   ['Телефон', "<a href='tel:+7(938)023-05-05'>+7(938)023-05-05</a>"],
    ['Почта', "<a href='mailto:info@gstou.ru'>info@gstou.ru</a>"],
    ['Адрес', "пр. Х. Исаева, 100, Грозный"]
 ])

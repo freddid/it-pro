@@ -102,7 +102,7 @@ export const useDataStore = defineStore('DataStore', {
             const res = await fetch(`${this.baseUrl}/api/chooseTime`, {
                method: 'POST',
                headers: { 'Content-Type': 'application/json', 'Authorization': sessionStorage.getItem('token') },
-               body: JSON.stringify(date)
+               body: JSON.stringify({ date })
             });
             const { msg } = await res.json()
 
