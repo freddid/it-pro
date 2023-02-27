@@ -22,7 +22,7 @@ const menuList = [
 
 <styles lang="scss">
 .header-menu ul {
-   @apply sm: (space-x-50px flex-row p-0) pt-30px flex-col justify-between flex uppercase font-bold;
+   @apply lg: (space-x-50px) sm: (space-x-20px flex-row p-0) pt-30px flex-col justify-between flex uppercase font-bold;
 
    & span {
       @apply relative overflow-hidden inline-block;

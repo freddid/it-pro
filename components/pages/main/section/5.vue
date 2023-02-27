@@ -37,7 +37,7 @@ const email = ref('')
 const rightReg = ref(false)
 const contacts = ref([
    ['Телефон', "<a href='tel:+7(938)023-05-05'>+7(938)023-05-05</a>"],
-   ['Почта', "<a href='mailto:info@gstou.ru'>info@gstou.ru</a>"],
+   ['Почта', "<a href='mailto:it-pro_inf@mail.ru'>it-pro_inf@mail.ru</a>"],
    ['Адрес', "пр. Х. Исаева, 100, Грозный"]
 ])
 

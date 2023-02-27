@@ -33,6 +33,12 @@ const showM = ref(false)
 #header {
    @apply py-15px fixed z-20 w-full sm: (absolute py-20px bg-transparent text-base-1) bg-base-1 text-base-2 transition-all max-h-72px;
 
+   @media (max-width: 576px) {
+      & {
+         box-shadow: 0px 5px 20px 1px #000;
+      }
+   }
+
    &.show-m {
       @apply max-h-300px;
 
