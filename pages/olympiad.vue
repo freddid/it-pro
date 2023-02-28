@@ -3,11 +3,11 @@
       <div class="container">
          <div class="container flex flex-col items-center md:pt-100px pt-40px">
             <UiSubtitle class="uppercase">olympiad</UiSubtitle>
-            <h2 class="h2T md:mb-120px mb-80px">Школная олимпиада</h2>
+            <h2 class="h2T md:mb-120px mb-80px">Школьная олимпиада</h2>
          </div>
       </div>
    </section>
-   <PagesMainSection5 data-aos="zoom-out-up" data-aos-easing="ease-in-sine" />
+   <PagesMainSection5 data-aos="zoom-out-up" data-aos-easing="ease-in-sine" :school="true" />
 </template>
 <script>
 </script>

@@ -9,6 +9,14 @@
             <input required v-model="name" class="inputF" placeholder="Имя *" type="text" name="firstName">
             <input required v-model="lastName" class="inputF" placeholder="Фамилия *" type="text" name="lastName">
             <input required v-model="email" class="inputF" placeholder="Электронная почта *" type="email" name="email">
+            <div class="flex">
+               Перед отправкой заявки&nbsp;
+               <div class="children:text-base-3" v-html="txt[0]" /> !
+            </div>
+            <div class="">
+               <input required id="test" type="checkbox" class="mr-10px">
+               <label class="cursor-pointer" for="test">Подтвердите {{ txt[1] }} !</label>
+            </div>
             <div>
                <button :class="[rightReg ? 'bg-base-1' : 'bg-base-3']" :disabled="rightReg"
                   class="p-20px text-base-2 rounded-[40px] hover:bg-base-1 transition-all">
@@ -32,6 +40,10 @@
 </template>
 <script setup>
 const name = ref('')
+const props = defineProps({
+   school: Boolean
+})
+const txt = computed(() => props.school ? ['пройдите <a href="#">тест</a>', 'прохождение теста'] : ['заполните <a href="#">анкету </a>', 'заполнение анкеты'])
 const lastName = ref('')
 const email = ref('')
 const rightReg = ref(false)

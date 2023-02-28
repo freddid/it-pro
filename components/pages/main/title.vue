@@ -1,13 +1,16 @@
 <template>
    <div>
       <div class="title-container">
-         <div class="glitch" data-text="IT_PRO">IT_PRO</div>
-         <div class="glow">IT-PRO</div>
+         <div class="glitch" :data-text="title">{{ title }}</div>
+         <div class="glow">{{ title }}</div>
       </div>
       <div class="scanlines"></div>
    </div>
 </template>
-<script>
+<script setup>
+const props = defineProps({
+   title: String
+})
 </script>
 <style lang="scss">
 .title-container {
@@ -15,8 +18,9 @@
 }
 
 .glitch {
-   @apply text-base-1 text-40px sm: text-[8vw] relative font-pres font-bold;
+   @apply text-base-1 relative font-pres font-bold;
    animation: glitch 5s 5s infinite;
+   font-size: inherit;
 }
 
 .glitch::before {

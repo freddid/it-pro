@@ -16,7 +16,7 @@
         </div>
         <div class="lg:(ml-20px w-1/2) flex flex-col justify-between">
           <div>
-            <label for="title">Заголово</label>
+            <label for="title">Заголовок</label>
             <input
               required
               v-model="title"
