@@ -43,7 +43,7 @@ const name = ref('')
 const props = defineProps({
    school: Boolean
 })
-const txt = computed(() => props.school ? ['пройдите <a href="#">тест</a>', 'прохождение теста'] : ['заполните <a href="#">анкету </a>', 'заполнение анкеты'])
+const txt = computed(() => props.school ? ['пройдите <a href="#">тест</a>', 'прохождение теста'] : ['заполните <a href="https://forms.gle/yaW7umJnk7Wtfnhy5">анкету </a>', 'заполнение анкеты'])
 const lastName = ref('')
 const email = ref('')
 const rightReg = ref(false)
