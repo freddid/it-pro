@@ -4,10 +4,10 @@
          <div>
             <UiSubtitle> <span class="sm:inline hidden">ГГНТУ,</span> 9 Марта - 9 Апрель 2023
             </UiSubtitle>
-            <PagesMainTitle class="text-40px sm: text-[8vw]" title="IT_PRO" />
-            <div class="sm:mt-40px mt-10px">
-               <PagesMainTitle class="text-40px sm: text-[6vw]" title="OLYMPIAD" />
+            <div class="sm:mb-40px mb-10px mt-20px">
+               <PagesMainTitle class="text-50px sm:text-[8vw]" title="IT_PRO" />
             </div>
+            <PagesMainTitle class="text-40px sm:text-[6vw]" title="OLYMPIAD" />
          </div>
       </div>
    </section>

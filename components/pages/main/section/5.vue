@@ -9,9 +9,9 @@
             <input required v-model="name" class="inputF" placeholder="Имя *" type="text" name="firstName">
             <input required v-model="lastName" class="inputF" placeholder="Фамилия *" type="text" name="lastName">
             <input required v-model="email" class="inputF" placeholder="Электронная почта *" type="email" name="email">
-            <div class="flex">
+            <div class="">
                Перед отправкой заявки&nbsp;
-               <div class="children:text-base-3" v-html="txt[0]" /> !
+               <span class="children:text-base-3" v-html="txt[0]" /> !
             </div>
             <div class="">
                <input required id="test" type="checkbox" class="mr-10px">
