@@ -4,7 +4,7 @@
          <UiSubtitle>Галлерея</UiSubtitle>
          <h2 class="h2T md:mb-120px mb-80px">Фото архив</h2>
          <div class="grid w-full text-center md:(grid-cols-4 p-0 gap-80px) pl-20px gap-50px">
-            <div @click="$router.push(`/gallery/${i}`)" v-for="image in gallery" :key="image[0]"
+            <div @click="$router.push(`/gallery/${image[0]}`)" v-for="image in gallery" :key="image[0]"
                class="text-2xl cursor-pointer">
                <div class="relative mb-20px z-0 hover:z-10">
                   <kinesis-container class=" h-200px md:w-auto w-4/5 m-auto">
