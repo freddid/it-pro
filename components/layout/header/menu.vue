@@ -13,7 +13,8 @@
 <script setup>
 const menuList = [
    { to: '/', txt: 'Главная' },
-   { to: '/olympiad', txt: 'Олимпиада' },
+   { to: '/school', txt: 'Школьник' },
+   { to: '/student', txt: 'Студент' },
    { to: '/news', txt: 'Новости' },
    { to: '/gallery', txt: 'Фото архив' },
    { to: '/documents', txt: 'Документы' },

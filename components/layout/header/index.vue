@@ -40,7 +40,7 @@ const showM = ref(false)
    }
 
    &.show-m {
-      @apply max-h-300px;
+      @apply max-h-500px;
 
       .burger span {
          @apply top-0 transform rotate-45 after: (top-0 transform rotate-90) before:bottom-0;

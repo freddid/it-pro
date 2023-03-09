@@ -1,9 +1,9 @@
 <template>
-   <section class="relative -top-15vh  sm:mb-250px mb-50px">
+   <section class="relative -top-15vh  sm:mb-50px mb-50px">
       <div class="container flex flex-col items-start lg:flex-row">
          <div class="lg:(w-1/2 m-0) mb-40px">
-            <UiSubtitle>Опыт_Написания</UiSubtitle>
-            <h2 class="h2T mb-30px">О Конкурсе</h2>
+            <UiSubtitle>О Конкурсе</UiSubtitle>
+            <h2 class="h2T mb-30px">«IT-Pro»</h2>
             <div class="sm:text-lg">
                <p class="indent-lg">Основными целями и задачами конкурса совместных проектных работ школьников
                   и студентов «IT-Pro» в области цифровых технологий являются:</p>

@@ -4,10 +4,9 @@
          <div>
             <UiSubtitle> <span class="sm:inline hidden">ГГНТУ,</span> 9 Марта - 9 Апрель 2023
             </UiSubtitle>
-            <div class="sm:mb-40px mb-10px mt-20px">
-               <PagesMainTitle class="text-50px sm:text-[8vw]" title="IT_PRO" />
-            </div>
-            <PagesMainTitle class="text-40px sm:text-[6vw]" title="OLYMPIAD" />
+            <!-- <div class="text-5xl uppercase">Школьная олимпиада</div> -->
+            <UiTitle class="text-base uppercase my-10px sm:(text-[2vw] my-30px)" title="Школьная олимпиада" />
+            <UiTitle class="text-50px sm:text-[8vw]" title="IT_PRO" />
          </div>
       </div>
    </section>
