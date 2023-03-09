@@ -8,7 +8,7 @@
             </div>
             <div class="flex justify-between max-w-[800px] mx-auto sm:mt-70px mt-40px">
                <nuxt-link to="/school"><button class="button-49 school" role="button">ШКОЛЬНИК</button></nuxt-link>
-               <nuxt-link to=""><button class="button-49 student" role="button">СТУДЕНТ</button></nuxt-link>
+               <nuxt-link to="/student"><button class="button-49 student" role="button">СТУДЕНТ</button></nuxt-link>
             </div>
          </div>
       </div>
