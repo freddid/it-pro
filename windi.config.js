@@ -50,7 +50,7 @@ module.exports = {
     },
     backgroundImage: {
       0: 'url(@/assets/imgs/main-bg.jpg)',
-      1: 'url(@/assets/imgs/header-bg.jpg)',
+      1: 'linear-gradient(45deg, rgba(0, 0, 0, 60%) 100%, transparent), url(@/assets/imgs/header-bg.jpg)',
     }
   },
   plugins: []
