@@ -5,8 +5,9 @@
             <UiSubtitle>Контакты</UiSubtitle>
             <h2 class="h2T">Контактная информация</h2>
          </div>
-         <div class="flex justify-between sm:(flex-row mt-60px) mt-40px flex-col gap-25px">
-            <div v-for="contact in contacts" :key="contact[0]" class="">
+         <div class="grid grid-cols-1 sm:(flex-row grid-cols-3 mt-60px) mt-40px flex-col">
+            <div v-for="contact in contacts" :key="contact[0]"
+               class="text-center sm:(border-t-0 border-l) border-t first:border-none p-20px">
                <span class="text-2xl text-base-3 font-bold"> {{ contact[0] }}:</span>
                <div class="text-xl mt-10px" v-html="contact[1]"></div>
             </div>
