@@ -8,7 +8,7 @@ module.exports = {
   shortcuts: {
     mnBg: 'bg-cover bg-center bg-no-repeat',
     inputF: 'bg-transparent placeholder-base-1 border-b border-base-1/30 outline-none p-10px font-mons',
-    h2T: 'sm:text-5xl text-32px font-bold'
+    h2T: 'sm:text-5xl text-28px font-bold'
   },
   theme: {
     extend: {

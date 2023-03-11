@@ -1,6 +1,6 @@
 <template>
    <section v-if="lastNew.length">
-      <div class="container sm:mb-250px mb-120px">
+      <div class="container sm:mb-250px mb-80px">
          <UiNewsBlock :news-obj="lastNew[0]" />
       </div>
    </section>

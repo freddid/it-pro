@@ -1,5 +1,5 @@
 <template>
-   <section class=" sm:mb-250px mb-120px">
+   <section class=" sm:mb-250px mb-80px">
       <div class="container">
          <div class="mb-40px lg:mb-0">
             <UiSubtitle>Контакты</UiSubtitle>
@@ -9,7 +9,7 @@
             <div v-for="contact in contacts" :key="contact[0]"
                class="text-center sm:(border-t-0 border-l) border-t first:border-none p-20px">
                <span class="text-2xl text-base-3 font-bold"> {{ contact[0] }}:</span>
-               <div class="text-xl mt-10px" v-html="contact[1]"></div>
+               <div class="sm:text-xl mt-10px" v-html="contact[1]"></div>
             </div>
          </div>
       </div>

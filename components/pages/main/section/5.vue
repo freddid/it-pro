@@ -1,5 +1,5 @@
 <template>
-   <section class=" sm:mb-250px mb-120px">
+   <section class=" sm:mb-250px mb-80px">
       <div class="container">
          <div class="mb-40px lg:mb-0">
             <UiSubtitle>Регистрация</UiSubtitle>

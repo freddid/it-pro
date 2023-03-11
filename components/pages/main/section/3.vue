@@ -1,5 +1,5 @@
 <template>
-   <section class=" sm:mb-250px mb-120px">
+   <section class=" sm:mb-250px mb-80px">
       <div class="container">
          <div class="mb-40px lg:mb-0">
             <UiSubtitle>Этапы</UiSubtitle>
@@ -9,7 +9,7 @@
             <div v-for="date in dates" :key="date[0]"
                class="text-center sm:(border-t-0 border-l) border-t first:border-none p-20px">
                <span class="text-2xl text-base-3 font-bold"> {{ date[0] }}:</span>
-               <div class="ml-20px text-xl mt-10px">
+               <div class="ml-20px sm:text-xl mt-10px">
                   <div v-for="el in date[1]" :key="el">{{ el }}</div>
                </div>
             </div>

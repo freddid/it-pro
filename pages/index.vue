@@ -6,7 +6,7 @@
             <div class="sm:text-3xl text-xl">Проектный конкурс в области цифровых технологий
                для студентов и школьников
             </div>
-            <div class="flex justify-between max-w-[800px] mx-auto sm:mt-70px mt-40px">
+            <div class="flex justify-around max-w-[800px] mx-auto sm:mt-70px mt-40px">
                <nuxt-link to="/school"><button class="button-49 school" role="button">ШКОЛЬНИК</button></nuxt-link>
                <nuxt-link to="/student"><button class="button-49 student" role="button">СТУДЕНТ</button></nuxt-link>
             </div>
@@ -137,9 +137,9 @@
 
    .button-49,
    .button-49:after {
-      width: 160px;
-      font-size: 18px;
-      padding: 10px 0;
+      width: 140px;
+      font-size: 16px;
+      padding: 8px 0;
       box-shadow: -4px 5px 0px #53f6c6;
    }
 

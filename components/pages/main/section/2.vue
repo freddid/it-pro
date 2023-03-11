@@ -1,11 +1,11 @@
 <template>
-   <section class="relative -top-15vh  sm:mb-50px mb-50px">
+   <section class="relative -top-15vh  sm:mb-50px mb-20px">
       <div class="container flex flex-col items-center items-start lg:flex-row">
          <div class="lg:(w-1/2 m-0) mb-40px">
             <UiSubtitle>О Конкурсе</UiSubtitle>
             <h2 class="h2T mb-30px">«IT-Pro»</h2>
-            <div class="sm:text-lg space-y-10px">
-               <p class="indent-lg">Основными целями и задачами школьной олимпиады IT-Pro являются:</p>
+            <div class="sm:(text-lg space-y-10px) space-y-7px text-sm">
+               <p class="sm:indent-lg indent-sm">Основными целями и задачами школьной олимпиады IT-Pro являются:</p>
                <ul class="pl-32px">
                   <li>— выявление и развитие у обучающихся интеллектуальных способностей и интереса к проектной и
                      научно-исследовательской деятельности;</li>
@@ -13,13 +13,13 @@
                   <li>— совершенствование системы непрерывной профессиональной подготовки обучающихся по принципу:
                      Школа–СПО-.</li>
                </ul>
-               <p class="indent-lg">
+               <p class="sm:indent-lg indent-sm">
                   В олимпиаде принимают участие школьники 10-11 классов с разных регионов.
                </p>
-               <p class="indent-lg">
+               <p class="sm:indent-lg indent-sm">
                   Победители олимпиады получают +3 балла к поступлению с возможностью сохранения их на 1 год.
                </p>
-               <p class="indent-lg">
+               <p class="sm:indent-lg indent-sm">
                   Конкурс включает в себя 3 этапа - организационный, отборочный и заключительный, первые два из которых
                   проводятся в заочной форме, а заключительный -в очной форме.
                </p>
