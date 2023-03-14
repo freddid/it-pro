@@ -1,9 +1,11 @@
 <template>
    <PagesMainSection1 />
    <PagesMainSection2 data-aos="zoom-out-up" />
-   <PagesMainSection3 data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" />
-   <PagesMainSection4 data-aos="zoom-out-up" data-aos-easing="linear" />
-   <PagesMainSection5 data-aos="zoom-out-up" data-aos-easing="ease-in-sine" />
+   <div data-aos="zoom-out-up" data-aos-easing="ease-out-cubic">
+      <PagesMainSection3 />
+      <PagesMainSection4 />
+      <PagesMainSection5 />
+   </div>
    <PagesMainSection6 data-aos="zoom-out-up" data-aos-easing="ease-in-sine" />
 </template>
 

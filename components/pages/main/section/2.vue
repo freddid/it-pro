@@ -4,7 +4,7 @@
          <div class="lg:(w-1/2 m-0) mb-40px">
             <UiSubtitle>О Конкурсе</UiSubtitle>
             <h2 class="h2T mb-30px">«IT-Pro»</h2>
-            <div class="sm:(text-lg space-y-10px) space-y-7px text-sm">
+            <div class="sm:(text-lg space-y-10px) space-y-7px text-[13px] leading-[unset]">
                <p class="sm:indent-lg indent-sm">Основными целями и задачами школьной олимпиады IT-Pro являются:</p>
                <ul class="pl-32px">
                   <li>— выявление и развитие у обучающихся интеллектуальных способностей и интереса к проектной и

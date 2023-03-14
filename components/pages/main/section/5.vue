@@ -3,7 +3,7 @@
       <div class="container">
          <div class="mb-40px lg:mb-0">
             <UiSubtitle>Регистрация</UiSubtitle>
-            <h2 class="h2T">Заполните форму для регистрации</h2>
+            <h2 class="h2T">Заполните форму регистрации</h2>
          </div>
          <a href="https://forms.gle/r6hbbjU4xRniCNid7" target="_blank" class="flex justify-center sm:mt-80px mt-50px">
             <button class="button-57" role="button"><span class="text">Форма
