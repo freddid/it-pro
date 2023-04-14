@@ -3,11 +3,9 @@
       <div class="py-10px px-15px min-h-300px h-full lg:(w-3/5 px-20px min-h-400px)">
          <UiSubtitle class="sm:text-11px">{{ new Date(newsObj.createdAt).toLocaleString('ru') }}</UiSubtitle>
          <h2 class="h2T mb-20px lg:(mb-30px text-32px) text-20px">{{ newsObj.title }}</h2>
-         <div class="lg:(text-lg text-left) text-sm text-justify">
-            {{ newsObj.content }}
-         </div>
+         <div class="lg:(text-lg text-left) text-sm text-justify whitespace-pre-line" v-html="newsObj.content" />
       </div>
-      <div class="lg:(w-2/5 h-auto) h-200px mnBg"
+      <div class="lg:(w-2/5 h-auto) h-200px mnBg bg-left"
          :style="{ backgroundImage: `url(${useDataStore().baseUrl}/${newsObj.img})` }">
          <!-- <img class="object-cover h-full w-full" :src="`${useDataStore().baseUrl}/${newsObj.img}`" alt=""> -->
       </div>
