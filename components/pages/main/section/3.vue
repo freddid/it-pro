@@ -9,8 +9,9 @@
             <div v-for="date in dates" :key="date[0]"
                class="text-center sm:(border-t-0 border-l) border-t first:border-none p-20px">
                <span class="text-2xl text-base-3 font-bold"> {{ date[0] }}:</span>
-               <div class="ml-20px sm:text-xl mt-10px">
-                  <div v-for="el in date[1]" :key="el">{{ el }}</div>
+               <div class="ml-20px mt-10px">
+                  <div class="sm:text-xl">{{ date[1][0] }}</div>
+                  <div class="mt-10px sm:text-base text-[13px] text-base-1/90">{{ date[1][1] }}</div>
                </div>
             </div>
          </div>
@@ -18,7 +19,14 @@
    </section>
 </template>
 <script setup>
-const dates = [
+const props = defineProps({
+   student: Boolean
+})
+const dates = props.student ? [
+   ['27 апреля', ['Встреча с профессионалами', 'Для участников проведут лекцию специалисты в различных областях. ']],
+   ['28 апреля', ['Мастер-класс', 'Участники смогут получить ценные рекомендации.']],
+   ['29 апреля', ['Работа над проектами и их защита', 'Участникам будут предоставлены кейсы проектов, с которыми им предстоит работать, а затем защитить свою работу перед экспертами.']]
+] : [
    ['Регистрация', ['10 Марта - 17 Марта']],
    ['I тур', ['18 марта 14:00 тестирование в офлайн и онлайн и форматах']],
    ['II тур', ['15 апреля в 11.00, очно для всех полуфиналистов']]
