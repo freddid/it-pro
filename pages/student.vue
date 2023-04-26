@@ -1,5 +1,5 @@
 <template>
-   <PagesMainSection1 :student="true" />
+   <PagesMainSection1 title="Студенческий проектный конкурс" />
    <PagesMainSection2 :student="true" data-aos="zoom-out-up" />
    <PagesMainSection3 :student="true" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" />
    <PagesMainSection4 :student="true" data-aos="zoom-out-up" data-aos-easing="linear" />

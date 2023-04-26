@@ -14,6 +14,7 @@
 const menuList = [
    { to: '/', txt: 'Главная' },
    { to: '/school', txt: 'Школьник' },
+   { to: '/festival', txt: 'Фестиваль' },
    { to: '/student', txt: 'Студент' },
    { to: '/news', txt: 'Новости' },
    { to: '/gallery', txt: 'Фото архив' },
@@ -23,7 +24,7 @@ const menuList = [
 
 <styles lang="scss">
 .header-menu ul {
-   @apply lg: (space-x-50px) sm: (space-x-20px flex-row p-0) pt-30px flex-col justify-between flex uppercase font-bold;
+   @apply lg: (space-x-50px) md: (space-x-20px flex-row p-0) pt-30px flex-col justify-between flex uppercase font-bold;
 
    & span {
       @apply relative overflow-hidden inline-block;

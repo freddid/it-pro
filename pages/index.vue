@@ -1,13 +1,14 @@
 <template>
-   <section class="bg-1 bg-right sm:h-screen h-600px mnBg">
+   <section class="bg-1 bg-right sm:h-screen h-700px mnBg">
       <div class="container h-full flex overflow-hidden items-center justify-center">
          <div>
             <UiTitle class="text-50px sm:(text-[8vw] mb-40px) mb-20px" title="IT_PRO" />
             <div class="sm:text-3xl text-xl">Проектный конкурс в области цифровых технологий
                для студентов и школьников
             </div>
-            <div class="flex justify-around max-w-[800px] mx-auto sm:mt-70px mt-40px">
+            <div class="flex items-center lg:(flex-row justify-around) gap-30px flex-col sm:(mt-70px gap-40px) mt-40px">
                <nuxt-link to="/school"><button class="button-49 school" role="button">ШКОЛЬНИК</button></nuxt-link>
+               <nuxt-link to="/festival"><button class="button-49 festival" role="button">ФЕСТИВАЛЬ</button></nuxt-link>
                <nuxt-link to="/student"><button class="button-49 student" role="button">СТУДЕНТ</button></nuxt-link>
             </div>
          </div>
@@ -50,6 +51,22 @@
 
 .button-49.student:after {
    content: 'СТУДЕНТ';
+}
+
+.button-49.festival {
+   box-shadow: 0px 1px 11px 3px #ffffff;
+   background: #fff;
+   color: #282828;
+   top: 6px;
+   border: 0;
+}
+
+.button-49.festival:after {
+   content: 'ФЕСТИВАЛЬ';
+   box-shadow: -6px 0px 0px #53f6c6;
+   color: #282828;
+   background: linear-gradient(315deg, transparent 3%, #282828 3%, #282828 5%, #282828 5%);
+   text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #282828;
 }
 
 .button-49:after {
@@ -137,14 +154,20 @@
 
    .button-49,
    .button-49:after {
-      width: 140px;
-      font-size: 16px;
-      padding: 8px 0;
+      font-size: 18px;
+      padding: 14px 0;
       box-shadow: -4px 5px 0px #53f6c6;
    }
+}
+
+@media(max-width:767px) {
 
    .button-49.school {
-      box-shadow: -4px 5px 0px #ffffff;
+      box-shadow: 4px -5px 0px #ffffff;
+   }
+
+   .button-49.festival[data-v-02281a80] {
+      top: 0;
    }
 }
 </style>

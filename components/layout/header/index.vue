@@ -3,13 +3,13 @@
       <div class="container">
          <div class="flex justify-between items-center">
             <nuxt-link to="/" class="text-2xl font-bold uppercase">IT_<span class="text-base-3">Pro</span></nuxt-link>
-            <div class="burger sm:hidden block" @click="showM = !showM">
+            <div class="burger md:hidden block" @click="showM = !showM">
                <span></span>
             </div>
-            <layoutHeaderMenu class="sm:block hidden" />
+            <layoutHeaderMenu class="md:block hidden" />
          </div>
          <transition name="home">
-            <layoutHeaderMenu v-if="showM" @close="showM = false" class="sm:hidden block" />
+            <layoutHeaderMenu v-if="showM" @close="showM = false" class="md:hidden block" />
          </transition>
       </div>
    </header>
@@ -31,7 +31,7 @@ const showM = ref(false)
 }
 
 #header {
-   @apply py-15px fixed z-20 w-full sm: (absolute py-20px bg-transparent text-base-1) bg-base-1 text-base-2 transition-all max-h-72px;
+   @apply py-15px fixed z-20 w-full md: (absolute py-20px bg-transparent text-base-1) bg-base-1 text-base-2 transition-all max-h-72px;
 
    @media (max-width: 576px) {
       & {

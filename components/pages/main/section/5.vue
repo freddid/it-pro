@@ -5,8 +5,8 @@
             <UiSubtitle>Регистрация</UiSubtitle>
             <h2 class="h2T">Заполните форму регистрации</h2>
          </div>
-         <a :href="student ? 'https://forms.gle/zFyk3xK5CUdZLU4b9' : 'https://forms.gle/r6hbbjU4xRniCNid7'" target="_blank"
-            class="flex justify-center sm:mt-80px mt-50px">
+         <a :href="student ? 'https://forms.gle/zFyk3xK5CUdZLU4b9' : festival ? 'https://forms.gle/e1WtmFDpxoU7nMjw7' : 'https://forms.gle/r6hbbjU4xRniCNid7'"
+            target="_blank" class="flex justify-center sm:mt-80px mt-50px">
             <button class="button-57" role="button"><span class="text">Форма
                   регистрации!</span><span>Перейти!</span></button>
          </a>
@@ -15,7 +15,8 @@
 </template>
 <script setup>
 const props = defineProps({
-   student: Boolean
+   student: Boolean,
+   festival: Boolean
 })
 </script>
 
