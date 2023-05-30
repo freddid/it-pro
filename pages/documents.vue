@@ -11,6 +11,11 @@
                <img class="mb-10px" src="@/assets/imgs/icon-docx.png" alt="">
                Положение IT-Pro
             </a>
+            <a href="/docs/Положение_на_Всероссийскую_олимпиаду_IT_Pro.docx"
+               class="flex flex-col transform items-center transition-all leading-normal hover:(text-base-3 scale-110)">
+               <img class="mb-10px" src="@/assets/imgs/icon-docx.png" alt="">
+               Положение на Всероссийскую олимпиаду IT-Pro
+            </a>
             <a href="/docs/Типовые задания к олимпиаде.docx"
                class="flex flex-col transform items-center transition-all leading-normal hover:(text-base-3 scale-110)">
                <img class="mb-10px" src="@/assets/imgs/icon-docx.png" alt="">
