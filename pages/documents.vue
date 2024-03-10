@@ -21,6 +21,11 @@
                <img class="mb-10px" src="@/assets/imgs/icon-docx.png" alt="">
                Типовые задания к олимпиаде
             </a>
+            <a href="/docs/0001202309290063.pdf"
+               class="flex flex-col transform items-center transition-all leading-normal hover:(text-base-3 scale-110)">
+               <img class="mb-10px" src="@/assets/imgs/pdf.png" alt="">
+               Приказ
+            </a>
          </div>
       </div>
    </section>

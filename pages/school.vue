@@ -1,5 +1,5 @@
 <template>
-   <PagesMainSection1 title="Школьная олимпиада" />
+   <PagesMainSection1 title="Всероссийская олимпиада" />
    <PagesMainSection2 data-aos="zoom-out-up" />
    <div data-aos="zoom-out-up" data-aos-easing="ease-out-cubic">
       <PagesMainSection3 />

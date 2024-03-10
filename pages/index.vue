@@ -3,8 +3,8 @@
       <div class="container h-full flex overflow-hidden items-center justify-center">
          <div>
             <UiTitle class="text-50px sm:(text-[8vw] mb-40px) mb-20px" title="IT_PRO" />
-            <div class="sm:text-3xl text-xl">Проектный конкурс в области цифровых технологий
-               для студентов и школьников
+            <div class="sm:text-3xl text-xl">Всероссийская предметная олимпиада «IT-PRO» по информатике и математике для
+               студентов и школьников
             </div>
             <div class="flex items-center lg:(flex-row justify-around) gap-30px flex-col sm:(mt-70px gap-40px) mt-40px">
                <nuxt-link to="/school"><button class="button-49 school" role="button">ШКОЛЬНИК</button></nuxt-link>
