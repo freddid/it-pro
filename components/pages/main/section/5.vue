@@ -7,9 +7,27 @@
          </div>
          <a :href="student ? 'https://forms.gle/zFyk3xK5CUdZLU4b9' : festival ? 'https://forms.gle/e1WtmFDpxoU7nMjw7' : 'https://forms.gle/r6hbbjU4xRniCNid7'"
             target="_blank" class="flex justify-center sm:mt-80px mt-50px">
-            <button class="button-57" role="button"><span class="text">Форма
-                  регистрации!</span><span>Перейти!</span></button>
+            <button class="button-57" role="button"><span class="text">
+                  Форма регистрации!
+               </span><span>Перейти!</span>
+            </button>
          </a>
+      </div>
+   </section>
+   <section class="sm:mb-250px mb-80px">
+      <div class="container">
+         <div class="mb-40px lg:mb-0">
+            <UiSubtitle>Пройдите тестирование, 20 марта - 10 апреля</UiSubtitle>
+            <h2 class="h2T">Тестирование</h2>
+         </div>
+         <div class="flex justify-center sm:mt-80px mt-50px gap-40px md:flex-row flex-col items-center">
+            <a v-for="url in urls" :key="url" :href="url.url" target="_blank">
+               <button class="button-57" role="button"><span class="text">
+                     {{ url.txt }}
+                  </span><span>Перейти!</span>
+               </button>
+            </a>
+         </div>
       </div>
    </section>
 </template>
@@ -18,6 +36,11 @@ const props = defineProps({
    student: Boolean,
    festival: Boolean
 })
+
+const urls = [
+   { txt: 'Информатика', url: 'https://forms.gle/ASTFh9Q6Q278K7sp6' },
+   { txt: 'Математика', url: 'https://forms.gle/5WcoheyXaRvcPvQw6' },
+]
 </script>
 
 <style>
