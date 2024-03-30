@@ -8,7 +8,7 @@
          <div class="grid grid-cols-1 sm:(flex-row grid-cols-3 mt-60px) mt-40px flex-col">
             <div v-for="date in dates" :key="date[0]"
                class="text-center sm:(border-t-0 border-l) border-t first:border-none p-20px">
-               <span class="text-2xl text-base-3 font-bold" v-if="date[0]"> {{ date[0] }}:</span>
+               <span class="text-2xl text-base-3 font-bold" v-if="date[0]"> {{ date[0] }}</span>
                <div class="ml-20px mt-10px">
                   <div class="sm:text-xl">{{ date[1][0] }}</div>
                   <div class="mt-10px sm:text-base text-[13px] text-base-1/90">{{ date[1][1] }}</div>
@@ -29,11 +29,11 @@ const dates = props.student ? [
    ['13 май', ['Работа над проектами и их защита', 'Участникам будут предоставлены кейсы проектов, с которыми им предстоит работать, а затем защитить свою работу перед экспертами.']]
 ] : props.festival ? [
    ['', []],
-   ['С 18 по 20 мая  2023', ['пр. Исаева, 100, ГУК']],
+   ['С 18 по 20 мая  2024', ['пр. Исаева, 100, ГУК']],
    ['', []]
 ] : [
-   ['Регистрация', ['15 Марта - 30 Марта']],
-   ['I тур', ['20 марта - 10 апреля тестирование в офлайн и онлайн и форматах']],
-   ['II тур', ['13 апреля в 11.00, очно для всех полуфиналистов']]
+   ['Регистрация', ['15 Марта - 19 Апреля']],
+   ['I тур', ['20 марта - 19 Апреля, онлайн тестирование']],
+   ['II тур', ['20 апреля в 11.00, очно для всех полуфиналистов']]
 ]
 </script>

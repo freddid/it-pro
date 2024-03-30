@@ -2,7 +2,7 @@
    <section class="bg-1 sm:h-screen h-600px mnBg">
       <div class="container h-full flex overflow-hidden items-center justify-center">
          <div>
-            <UiSubtitle> <span class="sm:inline hidden">ГГНТУ,</span> II этап, 13 Апреля 2024
+            <UiSubtitle> <span class="sm:inline hidden">ГГНТУ,</span> II этап, 20 Апреля 2024
             </UiSubtitle>
             <UiTitle class="text-base uppercase my-10px sm:(text-[2vw] my-30px leading-13) w-[97%]" :title="title" />
             <UiTitle class="text-50px sm:text-[8vw]" title="IT_PRO" />

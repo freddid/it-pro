@@ -1,6 +1,10 @@
 <template>
    <section v-if="lastNew.length">
       <div class="container sm:mb-250px mb-80px">
+         <div class="mb-40px lg:mb-60px">
+            <UiSubtitle>Последнее объявление</UiSubtitle>
+            <h2 class="h2T">Новости</h2>
+         </div>
          <UiNewsBlock :news-obj="lastNew[0]" />
       </div>
    </section>
