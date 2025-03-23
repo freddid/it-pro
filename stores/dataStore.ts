@@ -4,7 +4,7 @@ export const useDataStore = defineStore('DataStore', {
       users: [],
       gallery: {},
       date: '',
-      baseUrl: 'https://itpro-gstou.ru'
+      baseUrl: 'https://it-pro-gstou.ru'
    }),
 
    actions: {
